@@ -36,3 +36,5 @@ eval_dataloader = DataLoader(
 outputs = model(**batch)
 print(outputs.loss, outputs.logits.shape)
 # Load the model
+
+model = BertForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
